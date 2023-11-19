@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+section .conteudo-formulario{
+    border: 1px solid black;
+    margin: 100px 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+input{
+    margin: 20px 0;
+    padding: 10px 10px;
+}
