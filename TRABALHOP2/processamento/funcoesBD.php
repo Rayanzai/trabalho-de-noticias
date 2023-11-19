@@ -1,21 +1,35 @@
 <?php
 function conectarBD(){
-    $conexao = mysqli_connect("localhost", "root", "","xhopii");
+    $conexao = mysqli_connect("localhost", "root", "","trabalho-noticia");
     return($conexao);
 }
 
-function inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
+function inserirEditor($cpf, $nome, $sobrenome, $email, $senha){
     $conexao = conectarBD();
-    $consulta = "INSERT INTO cliente (cpf, nome, sobrenome, dataNascimento, telefone, email, senha) VALUES ('$cpf', '$nome', '$sobrenome', '$dataNasc', '$telefone', '$email', '$senha')";
+    $inserir_editor = "INSERT INTO editor (cpf, nome, sobrenome, email, senha) VALUES ('$cpf', '$nome', '$sobrenome', '$email', '$senha')";
 
-    mysqli_query($conexao, $consulta);
+    mysqli_query($conexao, $inserir_editor);
 }
 
-function retornarClientes(){
+function inserirNoticia($idnoticia, $titulo, $data_publicacao, $imagem_noticia){
     $conexao = conectarBD();
-    $consulta = "SELECT * FROM cliente";
-    $listaClientes = mysqli_query($conexao, $consulta);
-    return $listaClientes;
+    $inserir_noticia = "INSERT INTO noticia(titulo, data_publicacao, imagem_noticia) VALUES ('$titulo, '$data_publicacao', '$imagem_noticia')";
+    
+    mysqli_query($conexao, $inserir_noticia);
 }
+
+function inserirComentario($comentario, $fk_idnoticia){
+    $conexao = conectarBD();
+    $inserir_comentario = "INSERT INTO comentario(comentario) VALUES ($comentario)";
+
+    mysqli_query($conexao, $inserir_comentario);
+}
+
+// function retornarClientes(){
+//     $conexao = conectarBD();
+//     $consulta = "SELECT * FROM cliente";
+//     $listaClientes = mysqli_query($conexao, $consulta);
+//     return $listaClientes;
+// }
 
 ?>
