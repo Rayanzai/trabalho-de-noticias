@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comentario` (
   `idcomentario` int(11) NOT NULL,
-  `comentario` text NOT NULL,
+  `corpo_comentario` text NOT NULL,
   `FK_cpf_editor` varchar(14) NOT NULL,
   `FK_idnoticia_noticia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -69,6 +69,7 @@ CREATE TABLE `noticia` (
   `idnoticia` int(11) NOT NULL,
   `titulo` varchar(60) NOT NULL,
   `data_publicacao` date NOT NULL,
+  `corpo_noticia` longtext NOT NULL,
   `imagem_noticia` longblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
