@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header-login.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>WOW News</title>
 </head>
 <body>
-    
     <header>
         <h1>WOW News</h1>
         <div class="cabecalho">
@@ -22,20 +21,21 @@
         </div>
     </header>
 
-    <section class="container-login">
-        <section class="caixa-login">
+    <section class="container-cadastro">
+        <section class="caixa-cadastro">
             <section class="conteudo-formulario">
-                <h3>Login</h3>
+                <h3>Cadastre-se</h3>
                 <form id="form-log" method="POST" action="../processamento/processamento.php">
+                    <input id="input-log" type="name" placeholder="Nome" name="inputNomeLog">
+                    <input id="input-log" type="name" placeholder="Sobrenome" name="inputSobrenomeLog">
+                    <input id="input-log" type="cpf" placeholder="CPF" name="inputCPFLog">
                     <input id="input-log" type="text" placeholder="Email" name="inputEmailLog">
                     <input id="input-log" type="password" placeholder="Senha" name="inputSenhaLog">
-                    <input id="botao-log" type="submit" value="ENTRE">
+                    <input id="botao-log" type="submit" value="Enviar">
                 </form>
-                <p>Não possui Login? <a href="../view/cadastro.php">Cadastre-se</a></p>
+                <p>Já possui uma conta?<a href="../view/login.php">Entre</a></p>
             </section>
         </section>
     </section>
-
-    <script src="https://kit.fontawesome.com/09a77a43d5.js" crossorigin="anonymous"></script>
 </body>
 </html>

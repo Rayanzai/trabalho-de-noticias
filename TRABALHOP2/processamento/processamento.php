@@ -4,19 +4,19 @@ session_start();
 require "funcoesBD.php";
 
 //Cadastro de editor
-if(!empty($_POST['inputNome']) && !empty($_POST['inputSobrenome']) && 
-   !empty($_POST['inputCPF']) && !empty($_POST['inputEmail']) &&
-   !empty($_POST['inputSenha'])){
+if(!empty($_POST['inputNomeLog']) && !empty($_POST['inputSobrenomeLog']) && 
+   !empty($_POST['inputCPFLog']) && !empty($_POST['inputEmailLog']) &&
+   !empty($_POST['inputSenhaLog'])){
 
-   $nome = $_POST['inputNome'];
-   $sobrenome = $_POST['inputSobrenome'];
-   $cpf = $_POST['inputCPF'];
-   $email = $_POST['inputEmail'];
-   $senha = $_POST['inputSenha'];
+   $nome = $_POST['inputNomeLog'];
+   $sobrenome = $_POST['inputSobrenomeLog'];
+   $cpf = $_POST['inputCPFLog'];
+   $email = $_POST['inputEmailLog'];
+   $senha = $_POST['inputSenhaLog'];
 }
 
 inserirEditor($cpf, $nome, $sobrenome, $email, $senha);
-header('location: ../view/cadastro-editor.php');
+header('location: ../view/login.php');
 die();
 
 //Cadastro de noticia

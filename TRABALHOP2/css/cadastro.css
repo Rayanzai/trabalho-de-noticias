@@ -8,21 +8,21 @@ body {
     background-color: rgb(253, 253, 253);
 }
 
-.container-login {
+.container-cadastro {
     align-items: center;
     display: flex;
-    height: 600px;
+    height: 900px;
     justify-content: center;
     width: 100vw;
 }
 
-.caixa-login {
-    margin-top: 5%;
+.caixa-cadastro {
+    margin-top: 1%;
     align-items: center;
     border-radius: 5px;
     border: 1px solid grey;
     display: flex;
-    height: 500px;
+    height: 700px;
     justify-content: center;
     width: 30%;
     -webkit-box-shadow: 3px 8px 17px 0px rgba(0,0,0,0.33); 
@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 100%;
+    height: 700px;
 }
 
 .conteudo-formulario h3 {
@@ -45,13 +45,13 @@ body {
 }
 
 .conteudo-formulario p {
-    margin-top: 5%;
     font-size: larger;
 }
 
 .conteudo-formulario a{
     text-decoration: none;
     color: grey;
+    margin-left: 5px;
 }
 
 .conteudo-formulario a:hover{
@@ -64,8 +64,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 10%;
-    gap: 15%;
-    height: 40%;
+    gap: 7%;
+    height: 65%;
 }
 
 .conteudo-formulario #form-log #input-log {
@@ -87,9 +87,9 @@ body {
     border-radius: 15px;
     border: 1px solid grey;
     background-color: transparent;
+    font-size: 18px;
 }
 
 .conteudo-formulario #form-log #botao-log:hover {
     border: 2px solid black;
-
 }

@@ -1,12 +1,12 @@
 <?php
 function conectarBD(){
-    $conexao = mysqli_connect("localhost", "root", "","trabalho-noticia");
+    $conexao = mysqli_connect("localhost", "root", "","trabalhonoticia");
     return($conexao);
 }
 
 function inserirEditor($cpf, $nome, $sobrenome, $email, $senha){
     $conexao = conectarBD();
-    $inserir_editor = "INSERT INTO editor (cpf, nome, sobrenome, email, senha) VALUES ('$cpf', '$nome', '$sobrenome', '$email', '$senha')";
+    $inserir_editor = "INSERT INTO editor (PK_cpf, nome, sobrenome, email, senha) VALUES ('$cpf', '$nome', '$sobrenome', '$email', '$senha')";
 
     mysqli_query($conexao, $inserir_editor);
 }
@@ -34,11 +34,11 @@ function gerenciarNoticias(){
     return $listaNoticias;
 }
 
-//Exibir COMENTARIO
-function ExibirComentario(){
-    $conexao = conectarBD();
-    $consulta = "SELECT "
-}
+// //Exibir COMENTARIO
+// function ExibirComentario(){
+//     $conexao = conectarBD();
+//     $consulta = "SELECT "
+// }
 
 
 
