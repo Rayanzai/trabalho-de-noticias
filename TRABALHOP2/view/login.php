@@ -29,8 +29,13 @@
                 <form id="form-log" method="POST" action="../processamento/processamento.php">
                     <input id="input-log" type="text" placeholder="Email" name="inputEmailLog">
                     <input id="input-log" type="password" placeholder="Senha" name="inputSenhaLog">
-                    <input id="botao-log" type="submit" value="ENTRE">
+                    <input id="botao-log" type="submit" value="ENTRE" name="login">
                 </form>
+                <?php
+                    if(isset($_POST['login'])){
+                        LiberarLogin($email, $senha);
+                    }
+                ?>
                 <p>Não possui Login? <a href="../view/cadastro.php">Cadastre-se</a></p>
             </section>
         </section>

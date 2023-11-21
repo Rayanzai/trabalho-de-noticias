@@ -31,7 +31,7 @@
                     <input id="input-log" type="cpf" placeholder="CPF" name="inputCPFLog">
                     <input id="input-log" type="text" placeholder="Email" name="inputEmailLog">
                     <input id="input-log" type="password" placeholder="Senha" name="inputSenhaLog">
-                    <input id="botao-log" type="submit" value="Enviar">
+                    <input id="botao-log" type="submit" value="Enviar" name="cadastrar">
                 </form>
                 <p>Já possui uma conta?<a href="../view/login.php">Entre</a></p>
             </section>

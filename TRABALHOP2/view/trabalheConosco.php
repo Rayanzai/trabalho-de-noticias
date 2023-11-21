@@ -26,14 +26,14 @@
         <section class="caixa-cadastro">
             <section class="conteudo-formulario">
                 <h3>Trabalhe conosco</h3>
-                <form id="form-log" method="POST" action="">
+                <form id="form-log" method="POST" action="../processamento/processamento.php">
                     <input id="input-log" type="name" placeholder="Nome" name="inputNomeLog">
                     <input id="input-log" type="name" placeholder="Sobrenome" name="inputSobrenomeLog">
                     <input id="input-log" type="cpf" placeholder="CPF" name="inputCPFLog">
                     <input id="input-log" type="text" placeholder="Email" name="inputEmailLog">
                     <label id="label-curriculo">Breve curriculo:</label>
                     <textarea name="breve-curriculo" id="curriculo-log"></textarea>
-                    <input id="botao-log" type="submit" value="Enviar">
+                    <input id="botao-log" type="submit" value="Enviar" name="submit-trabalhe-conosco">
                 </form>
             </section>
         </section>
