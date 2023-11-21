@@ -40,6 +40,21 @@ function gerenciarNoticias(){
 //     $consulta = "SELECT "
 // }
 
+// LIBERAR LOGIN
+function liberarLogin($email, $senha){
+    $conexao = conectarBD();
 
+    $query = "SELECT * FROM editor WHERE email = '$email' AND senha = '$senha'";
+    $executar = mysqli_query($conexao, $query);
+    $return = mysqli_fetch_assoc($executar);
+
+    if (!empty($return['email']) && !empty($return['senha'])) {
+        header("location: ../view/noticia.php");
+    }
+    else{
+        echo "Usuário e senha não encontrados";
+        header("location: ../view/login.php");
+    }
+}
 
 ?>

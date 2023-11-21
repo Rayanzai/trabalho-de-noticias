@@ -41,5 +41,11 @@ inserirComentario($comentario);
 header('location: ../view/noticia.php');
 die();
 
+//Login
+if (isset($_POST['login']) && !empty($_POST['inputEmailLog']) && !empty($_POST['inputSenhaLog'])){
+   $email = $_POST['inputEmailLog'];
+   $senha= $_POST['inputSenhaLog'];
 
+   liberarLogin($email, $senha);
+}
 ?>
